@@ -38,3 +38,90 @@ Migrating to CreateFollows (20211101211708)
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3831979994993143245)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mVideo Load (3.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (24.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/yw3wp_tJlqk"], ["thumbnail", "http://i3.ytimg.com/vi/yw3wp_tJlqk/maxresdefault.jpg"], ["title", "Jo Koy: In His Elements"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.044907"], ["updated_at", "2021-11-02 12:30:06.044907"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/e0LJNn-GcnY"], ["thumbnail", "http://i3.ytimg.com/vi/e0LJNn-GcnY/maxresdefault.jpg"], ["title", "Sextuplets"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.077297"], ["updated_at", "2021-11-02 12:30:06.077297"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/qHkelMSSCgA"], ["thumbnail", "http://i3.ytimg.com/vi/qHkelMSSCgA/maxresdefault.jpg"], ["title", "Adam Devine Stand-Up Special"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.083903"], ["updated_at", "2021-11-02 12:30:06.083903"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/RW9G-edFuBI"], ["thumbnail", "http://i3.ytimg.com/vi/RW9G-edFuBI/maxresdefault.jpg"], ["title", "Patriot Act with Hasan Minhaj"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.090550"], ["updated_at", "2021-11-02 12:30:06.090550"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/idu_LCBxjQo"], ["thumbnail", "https://youtu.be/idu_LCBxjQo"], ["title", "Seth Rogens Hilarity for Charity"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.096415"], ["updated_at", "2021-11-02 12:30:06.096415"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/b9EkMc79ZSU"], ["thumbnail", "http://i3.ytimg.com/vi/b9EkMc79ZSU/maxresdefault.jpg"], ["title", "Stranger Things"], ["category", "Sci-Fi"], ["created_at", "2021-11-02 12:30:06.101350"], ["updated_at", "2021-11-02 12:30:06.101350"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/0DAmWHxeoKw"], ["thumbnail", "http://i3.ytimg.com/vi/0DAmWHxeoKw/maxresdefault.jpg"], ["title", "The Umbrella Academy"], ["category", "super hero"], ["created_at", "2021-11-02 12:30:06.106537"], ["updated_at", "2021-11-02 12:30:06.106537"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/Z6koPaImHzY"], ["thumbnail", "http://i3.ytimg.com/vi/Z6koPaImHzY/maxresdefault.jpg"], ["title", "Raising Dion"], ["category", "super hero"], ["created_at", "2021-11-02 12:30:06.116060"], ["updated_at", "2021-11-02 12:30:06.116060"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/fvCdLmxnkj0"], ["thumbnail", "http://i3.ytimg.com/vi/fvCdLmxnkj0/maxresdefault.jpg"], ["title", "Money Heist"], ["category", "action"], ["created_at", "2021-11-02 12:30:06.121066"], ["updated_at", "2021-11-02 12:30:06.121066"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/lTE5MAGpflw"], ["thumbnail", "https://youtu.be/lTE5MAGpflw"], ["title", "The Irregulars"], ["category", "mystery"], ["created_at", "2021-11-02 12:30:06.145766"], ["updated_at", "2021-11-02 12:30:06.145766"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (1.3ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/ViNNMQEW9fU"], ["thumbnail", "http://i3.ytimg.com/vi/ViNNMQEW9fU/maxresdefault.jpg"], ["title", "Murder Among the Mormons"], ["category", "docuseries"], ["created_at", "2021-11-02 12:30:06.150643"], ["updated_at", "2021-11-02 12:30:06.150643"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/V15RsZTMPA8"], ["thumbnail", "http://i3.ytimg.com/vi/V15RsZTMPA8/maxresdefault.jpg"], ["title", "Canine Intervention"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.156238"], ["updated_at", "2021-11-02 12:30:06.156238"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/aETNYyrqNYE"], ["thumbnail", "http://i3.ytimg.com/vi/aETNYyrqNYE/maxresdefault.jpg"], ["title", "Our Planet"], ["category", "docuseries"], ["created_at", "2021-11-02 12:30:06.161251"], ["updated_at", "2021-11-02 12:30:06.161251"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/OfWDTj5uLXQ"], ["thumbnail", "http://i3.ytimg.com/vi/OfWDTj5uLXQ/maxresdefault.jpg"], ["title", "Madame Claude"], ["category", "docuseries"], ["created_at", "2021-11-02 12:30:06.166215"], ["updated_at", "2021-11-02 12:30:06.166215"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/yGgbNCkJqSM"], ["thumbnail", "http://i3.ytimg.com/vi/yGgbNCkJqSM/maxresdefault.jpg"], ["title", "The One"], ["category", "crime drama"], ["created_at", "2021-11-02 12:30:06.171222"], ["updated_at", "2021-11-02 12:30:06.171222"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/Fft5igeEIEM"], ["thumbnail", "http://i3.ytimg.com/vi/Fft5igeEIEM/maxresdefault.jpg"], ["title", "The Surgeons Cut"], ["category", "docuseries"], ["created_at", "2021-11-02 12:30:06.176074"], ["updated_at", "2021-11-02 12:30:06.176074"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/QTIkUzkbzQk"], ["thumbnail", "http://i3.ytimg.com/vi/QTIkUzkbzQk/maxresdefault.jpg"], ["title", "Unbelievable"], ["category", "drama"], ["created_at", "2021-11-02 12:30:06.181438"], ["updated_at", "2021-11-02 12:30:06.181438"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (1.3ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/5hAXVqrljbs"], ["thumbnail", "http://i3.ytimg.com/vi/5hAXVqrljbs/maxresdefault.jpg"], ["title", "Ozark"], ["category", "drama series"], ["created_at", "2021-11-02 12:30:06.186517"], ["updated_at", "2021-11-02 12:30:06.186517"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/d2sJNee7FQ4"], ["thumbnail", "http://i3.ytimg.com/vi/d2sJNee7FQ4/maxresdefault.jpg"], ["title", "When We First Met"], ["category", "romcom"], ["created_at", "2021-11-02 12:30:06.194240"], ["updated_at", "2021-11-02 12:30:06.194240"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/3XN2X72jrFk"], ["thumbnail", "http://i3.ytimg.com/vi/3XN2X72jrFk/maxresdefault.jpg"], ["title", "The Stanford Prison Experiment"], ["category", "docudrama"], ["created_at", "2021-11-02 12:30:06.202875"], ["updated_at", "2021-11-02 12:30:06.202875"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/QsacpJwXCO8"], ["thumbnail", "http://i3.ytimg.com/vi/QsacpJwXCO8/maxresdefault.jpg"], ["title", "Ginny & Georgia"], ["category", "comedy drama"], ["created_at", "2021-11-02 12:30:06.212207"], ["updated_at", "2021-11-02 12:30:06.212207"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/gpv7ayf_tyE"], ["thumbnail", "http://i3.ytimg.com/vi/gpv7ayf_tyE/maxresdefault.jpg"], ["title", "Bridgerton"], ["category", "drama series"], ["created_at", "2021-11-02 12:30:06.221765"], ["updated_at", "2021-11-02 12:30:06.221765"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/D40uHmTSPew"], ["thumbnail", "http://i3.ytimg.com/vi/D40uHmTSPew/maxresdefault.jpg"], ["title", "I Care a Lot"], ["category", "comedy"], ["created_at", "2021-11-02 12:30:06.231296"], ["updated_at", "2021-11-02 12:30:06.231296"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/qnx6-YLXFwg"], ["thumbnail", "http://i3.ytimg.com/vi/qnx6-YLXFwg/maxresdefault.jpg"], ["title", "Thunder Force"], ["category", "super hero comedy"], ["created_at", "2021-11-02 12:30:06.240139"], ["updated_at", "2021-11-02 12:30:06.240139"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/H1WYnJF1Pwo"], ["thumbnail", "http://i3.ytimg.com/vi/H1WYnJF1Pwo/maxresdefault.jpg"], ["title", "Space Sweepers"], ["category", "Sci-Fi"], ["created_at", "2021-11-02 12:30:06.248412"], ["updated_at", "2021-11-02 12:30:06.248412"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "ben123"], ["password", "password"], ["created_at", "2021-11-02 12:30:06.270600"], ["updated_at", "2021-11-02 12:30:06.270600"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "anne123"], ["password", "password"], ["created_at", "2021-11-02 12:30:06.279651"], ["updated_at", "2021-11-02 12:30:06.279651"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "shaina123"], ["password", "password"], ["created_at", "2021-11-02 12:30:06.301594"], ["updated_at", "2021-11-02 12:30:06.301594"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m

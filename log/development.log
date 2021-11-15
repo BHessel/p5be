@@ -16278,3 +16278,331 @@ Processing by FavoritesController#index as */*
 Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.2ms | Allocations: 1228)
 
 
+Started GET "/users" for ::1 at 2021-11-15 14:54:15 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.4.1) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.4.1) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3831979994993143245)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFavorites (20211102132316)
+  [1m[35m (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "video_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3831979994993143245)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3831979994993143245)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFavorites (20211102132316)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "video_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (25.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3831979994993143245)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (25.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (240.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_clean_development"[0m
+  [1m[35m (191.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "backend_clean_test"[0m
+  [1m[35m (849.1ms)[0m  [1m[35mCREATE DATABASE "backend_clean_development" ENCODING = 'unicode'[0m
+  [1m[35m (272.9ms)[0m  [1m[35mCREATE DATABASE "backend_clean_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites" CASCADE[0m
+  [1m[35m (107.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "video_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (26.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer, "followed_user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (37.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "videos" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "videos" ("id" bigserial primary key, "url" character varying, "thumbnail" character varying, "title" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211102141556)[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211101210020),
+(20211101210410),
+(20211102132316);
+
+[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (15.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 19:55:46.277484"], ["updated_at", "2021-11-15 19:55:46.277484"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (26.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5605290104f9b138a676d310de7cd64c455de23d"], ["created_at", "2021-11-15 19:55:46.349040"], ["updated_at", "2021-11-15 19:55:46.349040"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites" CASCADE[0m
+  [1m[35m (198.7ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer, "video_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (33.2ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer, "followed_user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "videos" CASCADE[0m
+  [1m[35m (34.5ms)[0m  [1m[35mCREATE TABLE "videos" ("id" bigserial primary key, "url" character varying, "thumbnail" character varying, "title" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211102141556)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211101210020),
+(20211101210410),
+(20211102132316);
+
+[0m
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (30.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-15 19:55:47.561370"], ["updated_at", "2021-11-15 19:55:47.561370"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (14.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-11-15 19:55:47.610966"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5605290104f9b138a676d310de7cd64c455de23d"], ["created_at", "2021-11-15 19:55:47.654892"], ["updated_at", "2021-11-15 19:55:47.654892"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mVideo Load (3.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (17.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (7.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/yw3wp_tJlqk"], ["thumbnail", "http://i3.ytimg.com/vi/yw3wp_tJlqk/maxresdefault.jpg"], ["title", "Jo Koy: In His Elements"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.025502"], ["updated_at", "2021-11-15 19:55:48.025502"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/e0LJNn-GcnY"], ["thumbnail", "http://i3.ytimg.com/vi/e0LJNn-GcnY/maxresdefault.jpg"], ["title", "Sextuplets"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.059295"], ["updated_at", "2021-11-15 19:55:48.059295"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/qHkelMSSCgA"], ["thumbnail", "http://i3.ytimg.com/vi/qHkelMSSCgA/maxresdefault.jpg"], ["title", "Adam Devine Stand-Up Special"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.068141"], ["updated_at", "2021-11-15 19:55:48.068141"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/RW9G-edFuBI"], ["thumbnail", "http://i3.ytimg.com/vi/RW9G-edFuBI/maxresdefault.jpg"], ["title", "Patriot Act with Hasan Minhaj"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.102306"], ["updated_at", "2021-11-15 19:55:48.102306"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/idu_LCBxjQo"], ["thumbnail", "https://youtu.be/idu_LCBxjQo"], ["title", "Seth Rogens Hilarity for Charity"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.110179"], ["updated_at", "2021-11-15 19:55:48.110179"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (25.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/b9EkMc79ZSU"], ["thumbnail", "http://i3.ytimg.com/vi/b9EkMc79ZSU/maxresdefault.jpg"], ["title", "Stranger Things"], ["category", "Sci-Fi"], ["created_at", "2021-11-15 19:55:48.116726"], ["updated_at", "2021-11-15 19:55:48.116726"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/0DAmWHxeoKw"], ["thumbnail", "http://i3.ytimg.com/vi/0DAmWHxeoKw/maxresdefault.jpg"], ["title", "The Umbrella Academy"], ["category", "super hero"], ["created_at", "2021-11-15 19:55:48.150134"], ["updated_at", "2021-11-15 19:55:48.150134"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/Z6koPaImHzY"], ["thumbnail", "http://i3.ytimg.com/vi/Z6koPaImHzY/maxresdefault.jpg"], ["title", "Raising Dion"], ["category", "super hero"], ["created_at", "2021-11-15 19:55:48.157633"], ["updated_at", "2021-11-15 19:55:48.157633"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/fvCdLmxnkj0"], ["thumbnail", "http://i3.ytimg.com/vi/fvCdLmxnkj0/maxresdefault.jpg"], ["title", "Money Heist"], ["category", "action"], ["created_at", "2021-11-15 19:55:48.164302"], ["updated_at", "2021-11-15 19:55:48.164302"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/lTE5MAGpflw"], ["thumbnail", "https://youtu.be/lTE5MAGpflw"], ["title", "The Irregulars"], ["category", "mystery"], ["created_at", "2021-11-15 19:55:48.196776"], ["updated_at", "2021-11-15 19:55:48.196776"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/ViNNMQEW9fU"], ["thumbnail", "http://i3.ytimg.com/vi/ViNNMQEW9fU/maxresdefault.jpg"], ["title", "Murder Among the Mormons"], ["category", "docuseries"], ["created_at", "2021-11-15 19:55:48.204250"], ["updated_at", "2021-11-15 19:55:48.204250"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/V15RsZTMPA8"], ["thumbnail", "http://i3.ytimg.com/vi/V15RsZTMPA8/maxresdefault.jpg"], ["title", "Canine Intervention"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.211283"], ["updated_at", "2021-11-15 19:55:48.211283"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/aETNYyrqNYE"], ["thumbnail", "http://i3.ytimg.com/vi/aETNYyrqNYE/maxresdefault.jpg"], ["title", "Our Planet"], ["category", "docuseries"], ["created_at", "2021-11-15 19:55:48.217734"], ["updated_at", "2021-11-15 19:55:48.217734"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.8ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/OfWDTj5uLXQ"], ["thumbnail", "http://i3.ytimg.com/vi/OfWDTj5uLXQ/maxresdefault.jpg"], ["title", "Madame Claude"], ["category", "docuseries"], ["created_at", "2021-11-15 19:55:48.252401"], ["updated_at", "2021-11-15 19:55:48.252401"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/yGgbNCkJqSM"], ["thumbnail", "http://i3.ytimg.com/vi/yGgbNCkJqSM/maxresdefault.jpg"], ["title", "The One"], ["category", "crime drama"], ["created_at", "2021-11-15 19:55:48.302341"], ["updated_at", "2021-11-15 19:55:48.302341"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/Fft5igeEIEM"], ["thumbnail", "http://i3.ytimg.com/vi/Fft5igeEIEM/maxresdefault.jpg"], ["title", "The Surgeons Cut"], ["category", "docuseries"], ["created_at", "2021-11-15 19:55:48.310843"], ["updated_at", "2021-11-15 19:55:48.310843"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (24.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/QTIkUzkbzQk"], ["thumbnail", "http://i3.ytimg.com/vi/QTIkUzkbzQk/maxresdefault.jpg"], ["title", "Unbelievable"], ["category", "drama"], ["created_at", "2021-11-15 19:55:48.317462"], ["updated_at", "2021-11-15 19:55:48.317462"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/5hAXVqrljbs"], ["thumbnail", "http://i3.ytimg.com/vi/5hAXVqrljbs/maxresdefault.jpg"], ["title", "Ozark"], ["category", "drama series"], ["created_at", "2021-11-15 19:55:48.349769"], ["updated_at", "2021-11-15 19:55:48.349769"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/d2sJNee7FQ4"], ["thumbnail", "http://i3.ytimg.com/vi/d2sJNee7FQ4/maxresdefault.jpg"], ["title", "When We First Met"], ["category", "romcom"], ["created_at", "2021-11-15 19:55:48.356900"], ["updated_at", "2021-11-15 19:55:48.356900"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/3XN2X72jrFk"], ["thumbnail", "http://i3.ytimg.com/vi/3XN2X72jrFk/maxresdefault.jpg"], ["title", "The Stanford Prison Experiment"], ["category", "docudrama"], ["created_at", "2021-11-15 19:55:48.363211"], ["updated_at", "2021-11-15 19:55:48.363211"]]
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/QsacpJwXCO8"], ["thumbnail", "http://i3.ytimg.com/vi/QsacpJwXCO8/maxresdefault.jpg"], ["title", "Ginny & Georgia"], ["category", "comedy drama"], ["created_at", "2021-11-15 19:55:48.396348"], ["updated_at", "2021-11-15 19:55:48.396348"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/gpv7ayf_tyE"], ["thumbnail", "http://i3.ytimg.com/vi/gpv7ayf_tyE/maxresdefault.jpg"], ["title", "Bridgerton"], ["category", "drama series"], ["created_at", "2021-11-15 19:55:48.404401"], ["updated_at", "2021-11-15 19:55:48.404401"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.6ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/D40uHmTSPew"], ["thumbnail", "http://i3.ytimg.com/vi/D40uHmTSPew/maxresdefault.jpg"], ["title", "I Care a Lot"], ["category", "comedy"], ["created_at", "2021-11-15 19:55:48.412919"], ["updated_at", "2021-11-15 19:55:48.412919"]]
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/qnx6-YLXFwg"], ["thumbnail", "http://i3.ytimg.com/vi/qnx6-YLXFwg/maxresdefault.jpg"], ["title", "Thunder Force"], ["category", "super hero comedy"], ["created_at", "2021-11-15 19:55:48.446446"], ["updated_at", "2021-11-15 19:55:48.446446"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("url", "thumbnail", "title", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["url", "https://youtu.be/H1WYnJF1Pwo"], ["thumbnail", "http://i3.ytimg.com/vi/H1WYnJF1Pwo/maxresdefault.jpg"], ["title", "Space Sweepers"], ["category", "Sci-Fi"], ["created_at", "2021-11-15 19:55:48.454386"], ["updated_at", "2021-11-15 19:55:48.454386"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (21.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "ben123"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "ben123"], ["password", "password"], ["created_at", "2021-11-15 19:55:48.650675"], ["updated_at", "2021-11-15 19:55:48.650675"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "anne123"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "anne123"], ["password", "password"], ["created_at", "2021-11-15 19:55:48.662957"], ["updated_at", "2021-11-15 19:55:48.662957"]]
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "shaina123"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "shaina123"], ["password", "password"], ["created_at", "2021-11-15 19:55:48.701667"], ["updated_at", "2021-11-15 19:55:48.701667"]]
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFollow Create (32.3ms)[0m  [1m[32mINSERT INTO "follows" ("follower_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["follower_id", 1], ["followed_user_id", 3], ["created_at", "2021-11-15 19:55:48.757995"], ["updated_at", "2021-11-15 19:55:48.757995"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3831979994993143245)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3831979994993143245)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-11-15 14:56:40 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/benjaminhessel/.rvm/gems/ruby-2.6.1/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+Started GET "/users" for ::1 at 2021-11-15 14:56:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 58ms (Views: 11.8ms | ActiveRecord: 31.4ms | Allocations: 8553)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:56:48 -0500
+Processing by FavoritesController#index as HTML
+  [1m[36mFavorite Load (2.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 3.2ms | ActiveRecord: 29.5ms | Allocations: 2092)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:56:54 -0500
+Started GET "/videos" for ::1 at 2021-11-15 14:56:54 -0500
+Processing by FavoritesController#index as */*
+  [1m[36mFavorite Load (51.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 56ms (Views: 3.9ms | ActiveRecord: 51.7ms | Allocations: 838)
+
+
+Processing by VideosController#index as */*
+  [1m[36mVideo Load (170.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/controllers/videos_controller.rb:5:in `index'
+Completed 200 OK in 484ms (Views: 42.4ms | ActiveRecord: 398.1ms | Allocations: 10542)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:57:01 -0500
+Processing by FavoritesController#index as */*
+Started GET "/videos" for ::1 at 2021-11-15 14:57:01 -0500
+Processing by VideosController#index as */*
+  [1m[36mFavorite Load (52.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 57ms (Views: 3.5ms | ActiveRecord: 52.7ms | Allocations: 1601)
+
+
+  [1m[36mVideo Load (238.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/controllers/videos_controller.rb:5:in `index'
+Completed 200 OK in 249ms (Views: 10.4ms | ActiveRecord: 238.4ms | Allocations: 5569)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:57:05 -0500
+Processing by FavoritesController#index as */*
+  [1m[36mFavorite Load (3.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.0ms | Allocations: 819)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:57:07 -0500
+Processing by FavoritesController#index as */*
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 819)
+
+
+Started GET "/videos" for ::1 at 2021-11-15 14:57:07 -0500
+Processing by VideosController#index as */*
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/controllers/videos_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.8ms | Allocations: 4591)
+
+
+Started POST "/favorites" for ::1 at 2021-11-15 14:57:10 -0500
+Processing by FavoritesController#create as JSON
+  Parameters: {"favorites"=>{"user_id"=>1, "video_id"=>1}, "favorite"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:14:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:15:in `create'
+  [1m[36mFavorite Create (7.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "video_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["video_id", 1], ["created_at", "2021-11-15 19:57:10.351851"], ["updated_at", "2021-11-15 19:57:10.351851"]]
+  ↳ app/controllers/favorites_controller.rb:15:in `create'
+  [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:15:in `create'
+Completed 200 OK in 104ms (Views: 0.7ms | ActiveRecord: 50.8ms | Allocations: 9406)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 14:57:17 -0500
+Processing by FavoritesController#index as HTML
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 927)
+
+
+Started GET "/favorites" for ::1 at 2021-11-15 15:09:36 -0500
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FavoritesController#index as HTML
+  [1m[36mFavorite Load (13.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:5:in `index'
+Completed 200 OK in 201ms (Views: 119.0ms | ActiveRecord: 74.8ms | Allocations: 22368)
+
+

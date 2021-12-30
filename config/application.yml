@@ -1,0 +1,19 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+
+AWS_COGNITO_POOL_ID: us-east-2_Wt7ijZZ3t
+AWS_COGNITO_APP_CLIENT_ID: 56p81b7s377rn3hv0gvbit7v5t
+#could the client_id be the other one in the account? Something to look back on if there are bugs...
+AWS_COGNITO_REGION: us-east-2
+AWS_ACCESS_KEY: AKIATTE3AZ7GPNTIB3NB
+AWS_SECRET_KEY: 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
